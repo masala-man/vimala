@@ -18,14 +18,16 @@ function! Kolkata()
 	imap R r̥
 	imap ,R r̥̄
 	imap E ē
+	imap ae ê
 	imap O ō
+	imap ,au ô
 	" Yogavahas
 	imap M ṃ
-    imap ,M m̆
+	imap ,M m̆
 	imap H ḥ
 	" Gutturals
-	imap KH ḵẖ
-	imap GH g̱ẖ
+	imap Kh ḵẖ
+	imap Gh g̱ẖ
 	imap G ṅ
 	" Palatals
 	imap J ñ
@@ -33,16 +35,16 @@ function! Kolkata()
 	imap T ṭ
 	imap D ḍ
 	imap N ṇ
-	imap ,T ṯṯ
-    " Dentals
+	imap ,T ṯ
+	" Dentals
 	imap ,n ṉ
-    " Semivowels
+	" Semivowels
 	imap Y ẏ
 	imap ,r ṟ
 	imap Rh ṛ
 	imap L ḷ
 	imap Z ḻ
-    " Sibilants
+	" Sibilants
 	imap sh ś
 	imap Sh ṣ
 endfunction
@@ -63,8 +65,8 @@ function! KolkataOff()
 	iunmap ,M
 	iunmap H
 	" Gutturals
-	iunmap KH
-	iunmap GH
+	iunmap Kh
+	iunmap Gh
 	iunmap G
 	" Palatals
 	iunmap J
