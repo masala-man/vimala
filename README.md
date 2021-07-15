@@ -1,25 +1,28 @@
 # vimalā - Indic transliteration for Vim
 
-Vimala adds toggle-able keybinds for easy romanization of Indic texts.  
+Vimala adds toggle-able keybinds for easy romanization of Indic texts.
+
+**Why?**  
+
+Because digraphs are unwieldy and custom keybinds are cumbersome to manage when you need to work with schemes that require extended latin characters.
 
 **Currently Supported Standards:**
-* ALA-LC/Kolkata
+* ALA-LC/Kolkata [[Wikipedia](https://en.wikipedia.org/wiki/National_Library_at_Kolkata_romanisation)] [[Site](https://www.loc.gov/catdir/cpso/roman.html)]
 
 **Planned:**
 * ISO 15919 
 
 ## Quickstart
 
-Install the plugin with your plugin manager of choice and add the following to your vimrc:
+Vimala provides functions for each transliteration scheme that can be called with your own keybinds or manually.
+To get started install the plugin with your plugin manager of choice and add the following to your vimrc:
 
 ```vim
 nm <leader><leader>i :call ToggleKolkata()<CR>
 imap <leader><leader>i <esc>:call ToggleKolkata()<CR>a
 ```
 
-## ALA-LC/Kolkata [[Wikipedia](https://en.wikipedia.org/wiki/National_Library_at_Kolkata_romanisation)][[Site](https://www.loc.gov/catdir/cpso/roman.html)]
-
-### Bindings
+## Bindings
 
 | Keystroke | ALA-LC | Repr. Character |
 |:---------:|:------:|:---------------:|
@@ -46,12 +49,11 @@ imap <leader><leader>i <esc>:call ToggleKolkata()<CR>a
 |     ,n    |    ṉ   |        ன        |
 |     Y     |    ẏ   |        য        |
 |     ,r    |    ṟ   |        റ        |
-|     Rh    |    ṛ   |      Note 2     |
+|     Rh    |    ṛ   |         ड़      |
 |     L     |    ḷ   |        ळ        |
 |     Z     |    ḻ   |        ழ        |
 |     sh    |    ś   |        श        |
 |     Sh    |    ṣ   |        ष        |  
 
-Notes:
+**Notes:**  
 1. Used for ന്‌റ/ന്റ/ൻറ (nṯa) and റ്‌റ/റ്റ/ററ (ṯṯa)
-2. Used for ड़ (ṛa) and ढ़ (ṛha)
