@@ -1,16 +1,29 @@
-let g:KolkataOn=0
+""
+" vimala - Indic Transliteration for vim
+" File:         kolkata.vim
+" Description:  ALA-LC Bindings for UTF8 plaintext files.
+" Author:       Ayush Shenoy <masala-man@protonmail.com>
+" Repository:   https://www.github.com/masala-man/vimala
+" Version:      0.1
+" License:      GNU GPL v3
+""
 
-function! ToggleKolkata()
-	if !g:KolkataOn
-		call Kolkata()
+" Define variables
+let g:vimala_kolkata_utf8_on=0
+
+" Define function to toggle bindings
+function! ToggleVimalaKolkataUTF8()
+	if !g:vimala_kolkata_utf8_on
+		call VimalaKolkataUTF8()
 	else
-		call KolkataOff()
+		call VimalaKolkataUTF8Off()
 	endif
 endfunction
 
-function! Kolkata()
-	echo "ALA-LC macros activated"
-	let g:KolkataOn=1
+" Define mappings
+function! VimalaKolkataUTF8()
+	echo "ALA-LC (UTF8) macros activated"
+	let g:vimala_kolkata_utf8_on=1
 	" Vowels
 	imap A ā
 	imap I ī
@@ -49,9 +62,10 @@ function! Kolkata()
 	imap Sh ṣ
 endfunction
 
-function! KolkataOff()
-	echo "ALA-LC macros off."
-	let g:KolkataOn=0
+" Unmap bindings
+function! VimalaKolkataUTF8Off()
+	echo "ALA-LC (UTF8) macros off."
+	let g:vimala_kolkata_utf8_on=0
 	" Vowels
 	iunmap A
 	iunmap I
@@ -88,20 +102,3 @@ function! KolkataOff()
 	iunmap Sh
 endfunction
 
-" As of yet unimplemented:
-" Sindhi
-" Santhali
-" Kashmiri
-" Urdu
-" Telugu Ardhasunna s/a Bengali+Assamese chandrabindu s/a hindi anunasima n̐/m̐
-" Assamese extra dental ta ৎ 
-" Kannada ೞ l̤a 
-" Hindi alt retrofelx Ta [t̤a] 
-" hindi alt sa [s̤a]
-" hindi alt ha [h̤a]
-" Sanskrit Upadhmaniya
-" Sanskrit Ununasika 
-" Sanskrit Jihvamuliya
-" Tamil akku -> ḵ
-" Malayalam obsolete l̥
-" Malayalam Virama ȧ
